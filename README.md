@@ -18,4 +18,6 @@
 * [bash] modify iptables (port 2003 et 8080)
 * [global] Docker
 * [global] ElasticSearch
+* [ec2] script creation
+* [googlecloud] script
 
