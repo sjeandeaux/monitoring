@@ -5,7 +5,7 @@
 * CentOS
 * Grafana
 * Influxdb
-* Statd
+* Statsd
 * Nginx
 * Vagrant
 
