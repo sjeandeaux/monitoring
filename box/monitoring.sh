@@ -120,3 +120,6 @@ curl -X POST "127.0.0.1:8086/db/grafana/users?u=root&p=root" --data '{"name": "g
 
 # add cluster admin
 curl -X POST '127.0.0.1:8086/cluster_admins/root?u=root&p=root' -d '{"password": "changeit"}' --noproxy 127.0.0.1  -v 
+
+sudo yum -y install nc
+echo "local.grafana.devil 666 `date +%s`" | nc 127.0.0.1 2003

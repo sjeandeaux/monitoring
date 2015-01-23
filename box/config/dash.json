@@ -1,1 +1,7 @@
-TODO Dash with statd information...
+{
+  "title": "Create graph",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+}
