@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     monitoring.vm.provider "virtualbox" do |v|
       v.name = "monitoring"
     end
-    monitoring.vm.box = "TODO create box"
+    monitoring.vm.box = "chef/centos-6.5"
 
   
     #influxdb

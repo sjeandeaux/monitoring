@@ -60,13 +60,14 @@ sudo yum -y install nginx
 
 #htpasswd
 sudo yum -y install httpd-tools
-sudo htpasswd -dbc /etc/nginx/.htpasswd $HTTP_USER HTTP_PASSWORD
+sudo htpasswd -dbc /etc/nginx/.htpasswd $HTTP_USER $HTTP_PASSWORD
 
 #Installation configuration
 sudo rm /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/example_ssl.conf
 sudo sed -e "s|#GRAFANA_PORT#|$GRAFANA_PORT|g;s|#GRAFANA_HOST#|$GRAFANA_HOST|g" $NGINX_CONFIG -e  "w /etc/nginx/conf.d/grafana.conf"
 
 sudo chkconfig --level 2345 nginx on
+sudo chown nginx:nginx /etc/nginx/.htpasswd
 sudo service nginx start
 
 
