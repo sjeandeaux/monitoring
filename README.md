@@ -15,6 +15,7 @@
 * [Influxdb](http://localhost:8083)
 
 
+###Command to send a metric
 ```sh
 echo "local.grafana.devil 666 `date +%s`" | nc 127.0.0.1 2003
 ```
