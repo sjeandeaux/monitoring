@@ -15,7 +15,7 @@
 * [Influxdb](http://localhost:8083)
 
 
-'''sh
+```sh
 echo "local.grafana.devil 666 `date +%s`" | nc 127.0.0.1 2003
-'''
+```
 
