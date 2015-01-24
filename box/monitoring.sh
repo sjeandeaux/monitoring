@@ -25,6 +25,7 @@ HTTP_PASSWORD=changeit
 
 sudo yum -y update
 sudo yum history sync
+sudo yum -y install wget
 
 ###############################################################################################################################################
 #                                                                                                                                             #
