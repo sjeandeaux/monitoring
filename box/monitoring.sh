@@ -92,8 +92,8 @@ sudo yum -y groupinstall "Development Tools"
 curl -o /tmp/node-v0.10.33-linux-x64.tar.gz http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz
 sudo tar zxf /tmp/node-v0.10.33-linux-x64.tar.gz -C /usr/local/
 
-#statd
-curl -o /tmp/v0.7.2.tar.gz  https://github.com/etsy/statsd/archive/v0.7.2.tar.gz
+#statd on suit le chemin pour le tar.gz
+curl -L -o /tmp/v0.7.2.tar.gz  https://github.com/etsy/statsd/archive/v0.7.2.tar.gz
 sudo tar zxf /tmp/v0.7.2.tar.gz -C /usr/local
 sudo cp $STATSD_CONFIG /usr/local/statsd-0.7.2/config.js
 /usr/local/node-v0.10.33-linux-x64/bin/node  /usr/local/statsd-0.7.2/stats.js  /usr/local/statsd-0.7.2/config.js &
