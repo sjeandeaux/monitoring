@@ -35,7 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     monitoring.vm.synced_folder "box/", "/tmp/monitoring"
 
 
-    #monitoring.vm.provision "shell", path: "box/monitoring.sh"
+    monitoring.vm.provision "shell", path: "box/monitoring.sh"
   
 
   end
