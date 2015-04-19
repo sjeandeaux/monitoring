@@ -14,6 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     monitoring.vm.provider "virtualbox" do |v|
       v.name = "monitoring"
     end
+    #TODO create my box with just centOS
     monitoring.vm.box = "chef/centos-7.0"
 
   
