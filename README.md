@@ -8,6 +8,7 @@
 * [Statsd](https://github.com/etsy/statsd/)
 * [Nginx](http://nginx.org/)
 * [Vagrant](https://www.vagrantup.com/)
+* [Docker](https://www.docker.com/)
 
 ##Information
 
