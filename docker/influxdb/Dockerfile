@@ -8,7 +8,15 @@ RUN rpm -ivh /tmp/influxdb-latest-1.x86_64.rpm
 # configuration
 EXPOSE 8083 8086
 
-#config.toml
-VOLUME ["/influxdb/influxdb.toml", "/influxdb/data"]
+#DATA for influxdb
+#overwrite if you change configuration
+VOLUME /influxdb/data 
+VOLUME /influxdb/overwrite
 
-CMD ["influxdb", "-config=/influxdb/influxdb.toml"]
+COPY influxdb.sh /influxdb/influxdb.sh
+RUN chmod +x /influxdb/influxdb.sh
+
+COPY influxdb.toml /influxdb/influxdb.toml
+ENV CONFIG /influxdb/influxdb.toml
+
+CMD ["/influxdb/influxdb.sh"]
